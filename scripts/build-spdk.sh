@@ -55,7 +55,7 @@ case "$ARCH" in
         pip3 install -r ./scripts/pkgdep/requirements.txt
         # Build SPDK binary
         CFLAGS="-march=armv8-a" CXXFLAGS="-march=armv8-a" ./configure --target-arch=armv8-a --disable-tests --disable-unit-tests --disable-examples --with-ublk --enable-debug
-        DPDKBUILD_FLAGS="-Dplatform=generic" make -j"$(nproc)"
+        make -j"$(nproc)" DPDKBUILD_FLAGS="-Dplatform=generic" TARGET_ARCHITECTURE="armv8-a"
         make install
         ;;
     *)
