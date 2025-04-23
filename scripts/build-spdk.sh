@@ -38,6 +38,8 @@ git submodule update --init
 sed -i '/python3-pyelftools/d' ./scripts/pkgdep/sles.sh
 sed -i 's/python3-/python311-/g' ./scripts/pkgdep/sles.sh
 
+export CC="/usr/bin/gcc-14" CXX="/usr/bin/g++-14"
+
 # Build and install based on architecture
 case "$ARCH" in
     amd64)
