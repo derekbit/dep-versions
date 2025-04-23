@@ -12,8 +12,8 @@
         "description": "tgtd is a user-space daemon that provides SCSI target support."
     },
     "spdk": {
-        "repo": "https://github.com/longhorn/spdk.git",
-        "commit": "0c702696ba139c65b2cef3af76ca7648ad2b06d0",
+        "repo": "https://github.com/derekbit/spdk.git",
+        "commit": "d4580b8f32cf87db8203e51eb1fe1313862ee3c6",
         "tag": "v24.09.0+2",
         "description": "SPDK is a storage performance development kit."
     },
