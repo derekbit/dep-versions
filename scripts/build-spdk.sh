@@ -51,11 +51,11 @@ case "$ARCH" in
         ;;
     arm64)
         # Install dependencies
-        CFLAGS="-march=armv8-a" CXXFLAGS="-march=armv8-a" ./scripts/pkgdep.sh --uring
+        CFLAGS="-march=armv8-a+crypto" CXXFLAGS="-march=armv8-a+crypto" ./scripts/pkgdep.sh --uring
         pip3 install -r ./scripts/pkgdep/requirements.txt
         # Build SPDK binary
-        CFLAGS="-march=armv8-a" CXXFLAGS="-march=armv8-a" ./configure --target-arch=armv8-a --disable-tests --disable-unit-tests --disable-examples --with-ublk --enable-debug
-        make -j"$(nproc)" DPDKBUILD_FLAGS="-Dplatform=generic" TARGET_ARCHITECTURE="armv8-a"
+        CFLAGS="-march=armv8-a+crypto" CXXFLAGS="-march=armv8-a+crypto" ./configure --target-arch=armv8-a+crypto --disable-tests --disable-unit-tests --disable-examples --with-ublk --enable-debug
+        make -j"$(nproc)" DPDKBUILD_FLAGS="-Dplatform=generic" TARGET_ARCHITECTURE="armv8-a+crypto"
         make install
         ;;
     *)
