@@ -36,8 +36,8 @@
         "description": "nvme-cli is a utility for managing NVMe devices."
     },
     "nfs-ganesha": {
-        "repo": "https://github.com/rancher/nfs-ganesha.git",
-        "commit": "faaab3b04fbcba0aa5b2c1f0ce14518d8f72fa23",
+        "repo": "https://github.com/derekbit/nfs-ganesha.git",
+        "commit": "d0c8905ccc97b6e62854b9acb572b13ca388499d",
         "tag": "v6.5+faaab3b",
         "description": "NFS-Ganesha is an NFSv3,v4,v4.1 fileserver that runs inside the longhorn-shared-manager pod."
     },
